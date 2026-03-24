@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Bella Vita - Restaurant italien authentique proposant des plats traditionnels dans une ambiance chaleureuse">
+    <title>La Bella Vita - Restaurant Italien Authentique</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation fixe -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>La Bella Vita</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#menu" class="nav-link">Notre Menu</a></li>
+                <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#reservation" class="btn-reservation-nav">Réserver</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">La Bella Vita</h1>
+            <p class="hero-subtitle fade-in-delay">L'authenticité italienne au cœur de Paris</p>
+            <p class="hero-description fade-in-delay-2">
+                Découvrez les saveurs traditionnelles de l'Italie dans un cadre raffiné et chaleureux
+            </p>
+            <a href="#reservation" class="btn-primary fade-in-delay-3">Réserver une table</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop" alt="Intérieur du restaurant">
+                </div>
+                <div class="about-content reveal">
+                    <h2 class="section-title">Notre Histoire</h2>
+                    <div class="title-underline"></div>
+                    <p>
+                        Depuis 1985, <strong>La Bella Vita</strong> perpétue les traditions culinaires
+                        italiennes avec passion et authenticité. Notre chef, originaire de Toscane,
+                        sélectionne personnellement les meilleurs ingrédients pour vous offrir
+                        une expérience gastronomique inoubliable.
+                    </p>
+                    <p>
+                        Chaque plat est préparé avec amour, dans le respect des recettes
+                        ancestrales transmises de génération en génération. Venez vivre
+                        un véritable voyage culinaire au cœur de l'Italie.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <span>Récompensé Michelin</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Produits Bio</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Fait Maison</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Menu -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title reveal">Notre Carte</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle reveal">Des plats authentiques préparés avec passion</p>
+
+            <!-- Entrées -->
+            <div class="menu-category reveal">
+                <h3 class="category-title">
+                    <i class="fas fa-utensils"></i>
+                    Antipasti
+                </h3>
+                <div class="menu-items">
+                    <div class="menu-item clickable"
+                         data-dish="Bruschetta alla Romana"
+                         data-price="12€"
+                         data-image="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=800&auto=format&fit=crop"
+                         data-full-desc="Nos bruschettas sont préparées avec des tomates fraîches du marché, du basilic frais, de l'ail finement émincé et notre huile d'olive extra vierge importée directement de Toscane. Le pain est grillé à la perfection pour obtenir un croquant irrésistible tout en conservant une texture moelleuse à l'intérieur."
+                         data-ingredients="Tomates fraîches, basilic, ail, huile d'olive extra vierge, pain italien, sel de mer, poivre noir"
+                         data-allergens="Gluten">
+                        <div class="item-header">
+                            <h4>Bruschetta alla Romana <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">12€</span>
+                        </div>
+                        <p class="item-description">
+                            Tomates fraîches, basilic, ail et huile d'olive sur pain grillé
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Carpaccio di Manzo"
+                         data-price="16€"
+                         data-image="https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?w=800&auto=format&fit=crop"
+                         data-full-desc="Un carpaccio de bœuf exceptionnel composé de fines tranches de filet de bœuf cru de première qualité, assaisonné d'huile d'olive, de citron frais et agrémenté de copeaux de parmesan Reggiano AOP. Servi sur un lit de roquette fraîche avec des notes délicates de truffe blanche."
+                         data-ingredients="Filet de bœuf, roquette, parmesan Reggiano AOP, citron, huile d'olive, truffe blanche, câpres"
+                         data-allergens="Lactose">
+                        <div class="item-header">
+                            <h4>Carpaccio di Manzo <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">16€</span>
+                        </div>
+                        <p class="item-description">
+                            Fines tranches de bœuf, roquette, parmesan et citron
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Burrata Pugliese"
+                         data-price="14€"
+                         data-image="https://images.unsplash.com/photo-1571066811602-716837d681de?w=800&auto=format&fit=crop"
+                         data-full-desc="Notre burrata authentique est importée directement des Pouilles trois fois par semaine pour garantir une fraîcheur absolue. Ce fromage crémeux à cœur coulant est accompagné de tomates cerises multicolores, de basilic frais et d'un filet d'huile d'olive aromatisée au basilic. Un véritable délice italien !"
+                         data-ingredients="Burrata des Pouilles, tomates cerises, basilic frais, huile d'olive au basilic, fleur de sel, pain grillé"
+                         data-allergens="Lactose, Gluten">
+                        <div class="item-header">
+                            <h4>Burrata Pugliese <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">14€</span>
+                        </div>
+                        <p class="item-description">
+                            Burrata crémeuse, tomates cerises, basilic et huile d'olive
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Calamari Fritti"
+                         data-price="15€"
+                         data-image="https://images.unsplash.com/photo-1604909052743-94e838986d24?w=800&auto=format&fit=crop"
+                         data-full-desc="Des calamars frais de la Méditerranée, délicatement panés et frits dans notre huile d'olive spéciale. Croustillants à l'extérieur, tendres à l'intérieur, ils sont accompagnés de notre sauce marinara maison préparée avec des tomates San Marzano et des herbes fraîches. Servis avec des quartiers de citron."
+                         data-ingredients="Calamars frais, farine, œufs, chapelure, huile d'olive, sauce marinara, citron, persil"
+                         data-allergens="Fruits de mer, Gluten, Œufs">
+                        <div class="item-header">
+                            <h4>Calamari Fritti <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">15€</span>
+                        </div>
+                        <p class="item-description">
+                            Calamars frits croustillants avec sauce marinara
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plats principaux -->
+            <div class="menu-category reveal">
+                <h3 class="category-title">
+                    <i class="fas fa-pizza-slice"></i>
+                    Piatti Principali
+                </h3>
+                <div class="menu-items">
+                    <div class="menu-item featured clickable"
+                         data-dish="Osso Buco alla Milanese"
+                         data-price="32€"
+                         data-image="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800&auto=format&fit=crop"
+                         data-full-desc="Notre spécialité signature ! Un jarret de veau milanais braisé pendant 4 heures dans un bouillon aromatique de vin blanc, tomates et légumes. La viande devient si tendre qu'elle se détache de l'os. Servi avec un risotto safranné crémeux et une gremolata fraîche (persil, ail, zeste de citron). Un classique incontournable de la cuisine lombarde."
+                         data-ingredients="Jarret de veau, riz Carnaroli, safran, vin blanc, tomates, carottes, céleri, bouillon de veau, gremolata, parmesan"
+                         data-allergens="Lactose"
+                         data-badge="Chef's Special">
+                        <div class="item-header">
+                            <h4>Osso Buco alla Milanese <i class="fas fa-star"></i> <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">32€</span>
+                        </div>
+                        <p class="item-description">
+                            Jarret de veau braisé, risotto safranné, gremolata
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Lasagne della Nonna"
+                         data-price="22€"
+                         data-image="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=800&auto=format&fit=crop"
+                         data-full-desc="Les lasagnes de notre grand-mère sont un délice réconfortant fait avec amour. Des couches de pâtes fraîches maison alternent avec notre sauce bolognaise mitonnée 6 heures (bœuf, porc, tomate), une béchamel onctueuse et du parmesan Reggiano. Gratinées au four jusqu'à obtenir une croûte dorée irrésistible."
+                         data-ingredients="Pâtes fraîches, viande hachée (bœuf, porc), tomates San Marzano, béchamel, parmesan, oignon, carotte, céleri, vin rouge"
+                         data-allergens="Gluten, Lactose, Œufs"
+                         data-badge="Recette Familiale">
+                        <div class="item-header">
+                            <h4>Lasagne della Nonna <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">22€</span>
+                        </div>
+                        <p class="item-description">
+                            Lasagnes maison, sauce bolognaise, béchamel, parmesan
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Ravioli al Tartufo"
+                         data-price="28€"
+                         data-image="https://images.unsplash.com/photo-1587740908075-9ea5dfe84645?w=800&auto=format&fit=crop"
+                         data-full-desc="Des raviolis délicats faits maison, farcis d'un mélange crémeux de ricotta, parmesan et épinards. Nappés d'une sauce onctueuse à la truffe noire d'Alba et au beurre. Chaque bouchée offre une explosion de saveurs raffinées. Un plat d'exception pour les amateurs de truffes."
+                         data-ingredients="Pâte fraîche, ricotta, parmesan, épinards, truffe noire, beurre, crème fraîche, noix"
+                         data-allergens="Gluten, Lactose, Œufs, Fruits à coque"
+                         data-badge="Premium">
+                        <div class="item-header">
+                            <h4>Ravioli al Tartufo <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">28€</span>
+                        </div>
+                        <p class="item-description">
+                            Raviolis farcis à la ricotta, sauce à la truffe noire
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Saltimbocca alla Romana"
+                         data-price="26€"
+                         data-image="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?w=800&auto=format&fit=crop"
+                         data-full-desc="Une recette romaine classique où des escalopes de veau tendres sont garnies de jambon de Parme DOP et de feuilles de sauge fraîche, puis sautées dans du beurre et déglacées au vin blanc. Le nom 'saltimbocca' signifie littéralement 'saute en bouche' - et c'est exactement ce qui se passe ! Accompagné de légumes de saison."
+                         data-ingredients="Escalopes de veau, jambon de Parme DOP, sauge fraîche, beurre, vin blanc sec, farine, légumes de saison"
+                         data-allergens="Gluten, Lactose">
+                        <div class="item-header">
+                            <h4>Saltimbocca alla Romana <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">26€</span>
+                        </div>
+                        <p class="item-description">
+                            Escalope de veau, jambon de Parme, sauge, vin blanc
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Risotto ai Funghi Porcini"
+                         data-price="24€"
+                         data-image="https://images.unsplash.com/photo-1476124369491-b79e88feee71?w=800&auto=format&fit=crop"
+                         data-full-desc="Un risotto onctueux et crémeux préparé avec du riz Carnaroli de Vérone, des cèpes séchés et frais réhydratés dans un bouillon aromatique. Agrémenté de parmesan Reggiano râpé minute, de beurre et d'un filet d'huile de truffe. Chaque grain de riz est parfaitement cuit 'al dente' et enrobé d'une texture veloutée."
+                         data-ingredients="Riz Carnaroli, cèpes frais et séchés, bouillon de légumes, parmesan Reggiano, beurre, vin blanc, échalotes, huile de truffe"
+                         data-allergens="Lactose">
+                        <div class="item-header">
+                            <h4>Risotto ai Funghi Porcini <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">24€</span>
+                        </div>
+                        <p class="item-description">
+                            Risotto crémeux aux cèpes et parmesan
+                        </p>
+                    </div>
+                    <div class="menu-item featured clickable"
+                         data-dish="Branzino al Sale"
+                         data-price="34€"
+                         data-image="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&auto=format&fit=crop"
+                         data-full-desc="Un bar de ligne entier frais pêché en Méditerranée, cuit à la perfection dans une croûte de gros sel de mer avec des herbes aromatiques. Cette technique ancestrale préserve toute la délicatesse et l'humidité du poisson. Présenté à table puis découpé devant vous, accompagné de légumes de saison grillés et d'un filet d'huile d'olive citronnée."
+                         data-ingredients="Bar de ligne entier, gros sel de mer, herbes de Provence, citron, légumes de saison, huile d'olive citronnée"
+                         data-allergens="Poisson"
+                         data-badge="Chef's Special">
+                        <div class="item-header">
+                            <h4>Branzino al Sale <i class="fas fa-star"></i> <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">34€</span>
+                        </div>
+                        <p class="item-description">
+                            Bar de ligne entier en croûte de sel, légumes de saison
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category reveal">
+                <h3 class="category-title">
+                    <i class="fas fa-ice-cream"></i>
+                    Dolci
+                </h3>
+                <div class="menu-items">
+                    <div class="menu-item clickable"
+                         data-dish="Tiramisu Classico"
+                         data-price="9€"
+                         data-image="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=800&auto=format&fit=crop"
+                         data-full-desc="Le dessert italien par excellence ! Notre tiramisu respecte la recette traditionnelle de Vénétie : des biscuits Savoiardi imbibés d'espresso italien corsé, alternés avec une crème onctueuse de mascarpone, œufs et sucre. Le tout saupoudré généreusement de cacao amer. Préparé le matin même et laissé au repos pour que les saveurs se mélangent parfaitement."
+                         data-ingredients="Mascarpone, biscuits Savoiardi, café espresso, œufs, sucre, cacao amer, Marsala"
+                         data-allergens="Gluten, Lactose, Œufs">
+                        <div class="item-header">
+                            <h4>Tiramisu Classico <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">9€</span>
+                        </div>
+                        <p class="item-description">
+                            Le célèbre dessert italien au café et mascarpone
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Panna Cotta ai Frutti di Bosco"
+                         data-price="8€"
+                         data-image="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&auto=format&fit=crop"
+                         data-full-desc="Une panna cotta délicate et soyeuse parfumée à la vanille de Madagascar. Cette crème italienne cuite légèrement est démoulée devant vous et nappée d'un coulis maison de fruits rouges (framboises, fraises, myrtilles, mûres). Un dessert léger et rafraîchissant qui fond littéralement dans la bouche."
+                         data-ingredients="Crème fraîche, lait, sucre, vanille de Madagascar, gélatine, fruits rouges frais, sucre glace"
+                         data-allergens="Lactose">
+                        <div class="item-header">
+                            <h4>Panna Cotta ai Frutti di Bosco <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">8€</span>
+                        </div>
+                        <p class="item-description">
+                            Crème onctueuse vanillée, coulis de fruits rouges
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Cannoli Siciliani"
+                         data-price="10€"
+                         data-image="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800&auto=format&fit=crop"
+                         data-full-desc="Les authentiques cannoli de Sicile ! Des tubes de pâte croustillants frits à l'huile d'olive, garnis au dernier moment d'une crème de ricotta sicilienne sucrée, parfumée à la vanille et mélangée avec des pépites de chocolat noir et des écorces d'orange confites. Décorés de pistaches de Bronte hachées et de cerises confites."
+                         data-ingredients="Pâte (farine, sucre, beurre, Marsala), ricotta sicilienne, sucre glace, chocolat noir, écorces d'orange confites, pistaches de Bronte, cerises confites"
+                         data-allergens="Gluten, Lactose, Fruits à coque"
+                         data-badge="Spécialité Sicilienne">
+                        <div class="item-header">
+                            <h4>Cannoli Siciliani <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">10€</span>
+                        </div>
+                        <p class="item-description">
+                            Tubes croustillants fourrés à la ricotta sucrée
+                        </p>
+                    </div>
+                    <div class="menu-item clickable"
+                         data-dish="Gelato Artigianale"
+                         data-price="7€"
+                         data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&auto=format&fit=crop"
+                         data-full-desc="Nos glaces artisanales sont fabriquées chaque jour dans notre laboratoire avec des ingrédients naturels de première qualité. Texture crémeuse et onctueuse, goûts authentiques et intenses. Parfums du jour : Pistache de Bronte, Stracciatella, Citron de Sicile, Chocolat noir 70%, Noisette du Piémont, Fraise Tagada."
+                         data-ingredients="Lait, crème, sucre, ingrédients selon parfums (pistaches, chocolat, fruits frais, etc.)"
+                         data-allergens="Lactose, peut contenir des fruits à coque selon parfums">
+                        <div class="item-header">
+                            <h4>Gelato Artigianale <i class="fas fa-hand-pointer"></i></h4>
+                            <span class="price">7€</span>
+                        </div>
+                        <p class="item-description">
+                            3 boules de glace artisanale, parfums du jour
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boissons -->
+            <div class="menu-category reveal">
+                <h3 class="category-title">
+                    <i class="fas fa-wine-glass-alt"></i>
+                    Bevande
+                </h3>
+                <div class="menu-items-grid">
+                    <div class="beverage-section">
+                        <h4 class="beverage-subtitle">Vins Rouges</h4>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Chianti Classico</span>
+                                <span class="price">35€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Barolo DOCG</span>
+                                <span class="price">65€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Amarone della Valpolicella</span>
+                                <span class="price">75€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="beverage-section">
+                        <h4 class="beverage-subtitle">Vins Blancs</h4>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Pinot Grigio</span>
+                                <span class="price">32€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Vermentino di Sardegna</span>
+                                <span class="price">38€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Prosecco DOC</span>
+                                <span class="price">28€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="beverage-section">
+                        <h4 class="beverage-subtitle">Boissons</h4>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Eau minérale San Pellegrino</span>
+                                <span class="price">6€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Espresso / Cappuccino</span>
+                                <span class="price">4€</span>
+                            </div>
+                        </div>
+                        <div class="menu-item small">
+                            <div class="item-header">
+                                <span>Limoncello maison</span>
+                                <span class="price">8€</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galerie Photo -->
+    <section id="galerie" class="gallery">
+        <div class="container">
+            <h2 class="section-title reveal">Notre Galerie</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle reveal">Plongez dans l'ambiance de La Bella Vita</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item reveal" data-category="interieur">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop" alt="Salle du restaurant" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Notre salle principale</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="plats">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&auto=format&fit=crop" alt="Pasta fraîche" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Nos pâtes fraîches</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="interieur">
+                    <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&auto=format&fit=crop" alt="Ambiance romantique" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Ambiance romantique</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="plats">
+                    <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=800&auto=format&fit=crop" alt="Antipasti" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Nos antipasti</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="chef">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&auto=format&fit=crop" alt="Notre chef" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Notre chef en action</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="plats">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800&auto=format&fit=crop" alt="Desserts" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Nos desserts maison</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="interieur">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&auto=format&fit=crop" alt="Bar à vin" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Notre cave à vins</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal" data-category="plats">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800&auto=format&fit=crop" alt="Pizza artisanale" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <p>Pizzas au feu de bois</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title light reveal">Ce que disent nos clients</h2>
+            <div class="title-underline light"></div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Une expérience culinaire exceptionnelle ! Les plats sont d'une qualité remarquable et l'ambiance est chaleureuse. Le tiramisu est le meilleur que j'ai jamais goûté. Je recommande vivement !"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marie Dubois">
+                        <div class="author-info">
+                            <h4>Marie Dubois</h4>
+                            <p>Cliente fidèle depuis 3 ans</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Authentique et délicieux ! On se croirait vraiment en Italie. Le service est impeccable et le chef vient même saluer les clients. Les pâtes fraîches sont divines. Un vrai régal !"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas Martin">
+                        <div class="author-info">
+                            <h4>Thomas Martin</h4>
+                            <p>Critique gastronomique</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Le meilleur restaurant italien de Paris sans hésitation. J'y ai célébré mon anniversaire et tout était parfait : la nourriture, l'ambiance, le service. L'osso buco est à tomber par terre !"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie Laurent">
+                        <div class="author-info">
+                            <h4>Sophie Laurent</h4>
+                            <p>Parisienne gourmande</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Badges et certifications -->
+            <div class="badges-section reveal">
+                <h3>Nos récompenses</h3>
+                <div class="badges-container">
+                    <div class="badge">
+                        <i class="fas fa-award"></i>
+                        <span>Guide Michelin<br>2024</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-medal"></i>
+                        <span>TripAdvisor<br>Excellence</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Label<br>Qualité Italia</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-star"></i>
+                        <span>5 étoiles<br>Google</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réservation -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="reservation-content reveal">
+                <h2 class="section-title light">Réservez votre table</h2>
+                <div class="title-underline light"></div>
+                <p class="section-subtitle light">
+                    Pour une expérience culinaire inoubliable, réservez dès maintenant
+                </p>
+                <div class="reservation-methods">
+                    <div class="method">
+                        <i class="fas fa-phone"></i>
+                        <h3>Par téléphone</h3>
+                        <p>01 42 34 56 78</p>
+                    </div>
+                    <div class="method">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Par email</h3>
+                        <p>reservation@labellavita.fr</p>
+                    </div>
+                    <div class="method">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horaires</h3>
+                        <p>Tous les jours<br>12h-14h30 | 19h-23h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Contactez-nous</h2>
+            <div class="title-underline"></div>
+
+            <div class="contact-grid">
+                <!-- Formulaire de contact -->
+                <div class="contact-form-container reveal">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="reservation">Réservation</option>
+                                <option value="event">Événement privé</option>
+                                <option value="info">Informations</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="contact-info reveal">
+                    <div class="info-block">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>
+                            42 Rue de la Gastronomie<br>
+                            75008 Paris, France
+                        </p>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>01 42 34 56 78</p>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contact@labellavita.fr</p>
+                    </div>
+                    <div class="info-block">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horaires d'ouverture</h3>
+                        <p>
+                            Lundi - Vendredi: 12h-14h30, 19h-23h<br>
+                            Samedi - Dimanche: 12h-15h, 19h-23h30
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Google Maps -->
+            <div class="map-container reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2899558002024!2d2.3177536!3d48.8738229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fec70fb1483%3A0x6f0b62c6674c73d!2sArc%20de%20Triomphe!5e0!3m2!1sfr!2sfr!4v1234567890"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modale pour les plats -->
+    <div id="dishModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fermer">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="" alt="" id="modalImage">
+                    <span class="modal-badge" id="modalBadge"></span>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-price" id="modalPrice"></p>
+                    <div class="modal-description">
+                        <h3><i class="fas fa-info-circle"></i> Description</h3>
+                        <p id="modalFullDesc"></p>
+                    </div>
+                    <div class="modal-ingredients">
+                        <h3><i class="fas fa-list"></i> Ingrédients</h3>
+                        <p id="modalIngredients"></p>
+                    </div>
+                    <div class="modal-allergens">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Allergènes</h3>
+                        <p id="modalAllergens"></p>
+                    </div>
+                    <button class="btn-primary btn-order">
+                        <i class="fas fa-utensils"></i> Commander ce plat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox pour la galerie -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Fermer">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" aria-label="Image précédente">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" aria-label="Image suivante">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <p id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>La Bella Vita</h3>
+                    <p>L'authenticité italienne au cœur de Paris depuis 1985</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#menu">Notre Menu</a></li>
+                        <li><a href="#reservation">Réserver</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lundi - Vendredi<br>12h-14h30 | 19h-23h</p>
+                    <p>Samedi - Dimanche<br>12h-15h | 19h-23h30</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone"></i> 01 42 34 56 78</p>
+                    <p><i class="fas fa-envelope"></i> contact@labellavita.fr</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 42 Rue de la Gastronomie, 75008 Paris</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 La Bella Vita. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
